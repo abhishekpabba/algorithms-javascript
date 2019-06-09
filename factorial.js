@@ -11,8 +11,8 @@ factorial(4);
 
 // Alternative Solution
 // function factorial(num) {
-//   var result = 0;
-//   for(var i = 1; i < num; i++) {
+//   let result = 0;
+//   for(let i = 1; i < num; i++) {
 //     result += result * i;
 //   }
 

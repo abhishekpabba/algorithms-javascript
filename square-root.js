@@ -1,12 +1,12 @@
 function isvalidPowers(arr1, arr2) {
-  var compareObj = {};
+  let compareObj = {};
   
   arr2.forEach(val => {
     if (!compareObj[val]) compareObj[val] = 0;
     compareObj[val]++;
   });
   
-  var isValid = true;
+  let isValid = true;
   arr1.forEach(val =>  {
     val = val * val;
     if (compareObj[val]) {

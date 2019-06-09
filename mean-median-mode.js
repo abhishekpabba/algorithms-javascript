@@ -7,45 +7,32 @@ function meanMedianMode(values) {
 }
 
 function mean(values) {
-  var sum = 0;
+  let sum = 0;
   values.forEach(number => {
     sum += number;
   });
 
-  var mean = sum / values.length;
-
-  return mean;
+  return sum / values.length;
 }
 
 function median(values) {
-  values.sort(function(a, b) {
-    return a - b;
-  });
-
-  var median;
-
-  if(values.length % 2 !== 0) {
-    median = values[Math.floor(values.length / 2)];
-  } else {
-    var mid1 = values[(values.length) / 2 - 1];
-    var mid2 = values[(values.length) / 2];
-    median = (mid1 + mid2) / 2
-  }
-
-  return median;
+  values.sort((a, b) => a - b);
+  let medianIndex = Math.floor(arr.length / 2);
+    
+  return arr.length % 2 === 1 ? arr[medianIndex] : (arr[medianIndex - 1] + arr[medianIndex]) / 2;
 }
 
 function mode(values) {
-  var modeObj = {};
+  let modeObj = {};
 
   values.forEach(val => {
     if(!modeObj[val]) modeObj[val] = 0;
     modeObj[val]++;
   });
 
-  var maxFrequency = 0;
-  var modes = [];
-  for(var num in modeObj) {
+  let maxFrequency = 0;
+  let modes = [];
+  for(let num in modeObj) {
     if(modeObj[num] > maxFrequency) {
       modes = [num];
       maxFrequency = modeObj[num];

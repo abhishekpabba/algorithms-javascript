@@ -1,6 +1,6 @@
 function binarySearch(numArray, key) {
-  var middleIdx = Math.floor(numArray.length / 2);
-  var middleElm = numArray[middleIdx];
+  let middleIdx = Math.floor(numArray.length / 2);
+  let middleElm = numArray[middleIdx];
 
   if(middleElm === key) return true;
   else if(middleElm < key && numArray.length > 1) {

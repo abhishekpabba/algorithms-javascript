@@ -1,18 +1,18 @@
 function mergeSort(arr) {
     if(arr.length < 2) return arr;
   
-    var middleIdx = Math.floor(arr.length / 2);
-    var firstHalf = arr.slice(0, middleIdx);
-    var secondHalf = arr.slice(middleIdx);
+    let middleIdx = Math.floor(arr.length / 2);
+    let firstHalf = arr.slice(0, middleIdx);
+    let secondHalf = arr.slice(middleIdx);
   
     return merge(mergeSort(firstHalf), mergeSort(secondHalf));
   }
   
   function merge(arr1, arr2) {
-    var result = [];
+    let result = [];
   
     while(arr1.length && arr2.length) {
-      var minElm;
+      let minElm;
   
       if(arr1[0] < arr2[0]) minElm = arr1.shift();
       else minElm = arr2.shift();
@@ -23,6 +23,7 @@ function mergeSort(arr) {
     else result = result.concat(arr2);
   
     return result;
+    // return [...result, ...arr1, ...arr2]
   }
   
   mergeSort([2, 8, 22, 80, 3, 1, 66, 4, 88]);

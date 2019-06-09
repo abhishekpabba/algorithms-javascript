@@ -1,10 +1,10 @@
 function twoSum(numArr, sum) {
-  var pairs = [];
-  var hashTable = [];
+  let pairs = [];
+  let hashTable = [];
 
   numArr.forEach(num => {
-    var currentNum = num;
-    var counterPart = sum - num;
+    let currentNum = num;
+    let counterPart = sum - num;
     if(hashTable.indexOf(counterPart) !== -1) {
       pairs.push([currentNum, counterPart]);
     }

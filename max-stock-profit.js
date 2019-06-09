@@ -1,10 +1,10 @@
 function maxStockProfit(priceArr) {
-  var maxProfit = -1;
-  var buyPrice = 0;
-  var sellPrice = 0;
+  let maxProfit = -1;
+  let buyPrice = 0;
+  let sellPrice = 0;
 
-  var changeBuyPrice = true;
-  for(var i = 0; i < priceArr.length; i++) {
+  let changeBuyPrice = true;
+  for(let i = 0; i < priceArr.length; i++) {
     if(changeBuyPrice) buyPrice = priceArr[i];
     sellPrice = priceArr[i + 1];
 
@@ -12,7 +12,7 @@ function maxStockProfit(priceArr) {
       changeBuyPrice = true;
     }
     else {
-      var tempProfit = sellPrice - buyPrice;
+      let tempProfit = sellPrice - buyPrice;
       if(tempProfit > maxProfit) maxProfit = tempProfit;
       changeBuyPrice = false;
     }

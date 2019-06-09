@@ -1,8 +1,8 @@
 function mostCommonWord(phrase, bannedWord) {
-  var phraseArr = phrase.replace(/[^a-zA-Z0-9]/g, ' ').toLowerCase().split(' ');
-  var hashObj = {};
-  var highestCountWord = '';
-  var count = 0;
+  let phraseArr = phrase.replace(/[^a-zA-Z0-9]/g, ' ').toLowerCase().split(' ');
+  let hashObj = {};
+  let highestCountWord = '';
+  let count = 0;
 
   phraseArr.forEach(word => {
     if(bannedWord.indexOf(word) === -1) {
