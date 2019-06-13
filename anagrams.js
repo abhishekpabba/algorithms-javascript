@@ -7,7 +7,33 @@ function cleanString(str) {
 }
    
 anagrams('Rail! Safety', 'Fairy Tales');
+
+
+// Alternative Solution
+// function validAnagram(stringA, stringB) {
+//   stringA = stringA.replace(/[^\w]/g, '').toLowerCase();
+//   stringB = stringB.replace(/[^\w]/g, '').toLowerCase();
+//   if (stringA.length !== stringB.length) return false;
+//   const aCharMap = {};
+
+//   for (let char of stringA) {
+//     aCharMap[char] = aCharMap[char] + 1 || 1;
+//   }
+
+//   for (let char of stringB) {
+//     if (!aCharMap[char]) {
+//       return false;
+//     } else {
+//       aCharMap[char] -= 1;
+//     }
+//   }
+
+//   return true;
+// }
+
+// validAnagram('Rail! Safety', 'Fairy Tales');
    
+
 // Alternative Solution
 // function anagrams(stringA, stringB) {
 //   const aCharMap = buildCharMap(stringA);
@@ -38,3 +64,5 @@ anagrams('Rail! Safety', 'Fairy Tales');
 // }
 
 // anagrams('Rail! Safety', 'Fairy Tales');
+
+// Alternative Solution

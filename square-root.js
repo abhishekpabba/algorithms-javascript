@@ -2,8 +2,7 @@ function isvalidPowers(arr1, arr2) {
   let compareObj = {};
   
   arr2.forEach(val => {
-    if (!compareObj[val]) compareObj[val] = 0;
-    compareObj[val]++;
+    compareObj[val] = compareObj[val] + 1 || 1;
   });
   
   let isValid = true;
