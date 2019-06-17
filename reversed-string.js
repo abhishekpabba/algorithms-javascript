@@ -22,3 +22,10 @@ reversedString("Hello!");
 // function reversedString(str) {
 //   return str.split('').reduce((rev, char) => char + rev, '')
 // }
+
+// Recursive Approach
+// function reversedString(str) {
+//     if (str.length <= 1) return str;
+
+//     return reversedString(str.slice(1)) + str[0];
+// }

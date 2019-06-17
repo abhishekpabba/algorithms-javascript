@@ -1,10 +1,8 @@
 function factorial(num) {
-  if(num === 1) {
-    return num;
-  }
-  else {
-    return num * factorial(num - 1);
-  }
+  if (num < 0) return 0;
+  if(num === 1) return num;
+  
+  return num * factorial(num - 1);
 }
 
 factorial(4);
@@ -20,3 +18,15 @@ factorial(4);
 // }
 
 // factorial(5);
+
+// Alternative Solution
+// function factorial(num) {
+//   let result = 1;
+//   for(let i = num; i > 1; i--) {
+//     result = result * i;
+//   }
+
+//   return result;
+// }
+
+// factorial(5);   s
