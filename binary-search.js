@@ -1,8 +1,8 @@
 // Divide and Conquer Pattern
 // Recurssive Approach
 function binarySearch(array, key) {
-  var middleIdx = Math.floor(array.length / 2);
-  var middleElm = array[middleIdx];
+  let middleIdx = Math.floor(array.length / 2);
+  let middleElm = array[middleIdx];
 
   if(middleElm === key) return true;
   else if(middleElm < key && array.length > 1) {
@@ -15,7 +15,7 @@ function binarySearch(array, key) {
 }
 
 binarySearch([5, 7, 12, 16, 36, 39, 42, 56, 71], 56);
-// Time Complexity log(N)
+// Time Complexity O(logn)
 
 // To Do
 // function binarySearch(array, val) {
@@ -37,17 +37,4 @@ binarySearch([5, 7, 12, 16, 36, 39, 42, 56, 71], 56);
 //   return -1;
 // }
 // binarySearch([5, 7, 12, 16, 36, 39, 42, 56, 71], 56);
-// Time Complexity log(N)
-
-
-// function binarySearch(array, val) {
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] === val) {
-//       return i;
-//     }
-//   }
-//   return -1;
-// }
-
-// binarySearch([5, 7, 12, 16, 36, 39, 42, 56, 71], 56);
-// Time Complexity O(N)
+// Time Complexity O(logn)

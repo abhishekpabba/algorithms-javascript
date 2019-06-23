@@ -17,3 +17,4 @@ function selectionSort(arr) {
   }
   
   selectionSort([1, 19, -30, 0, 12, 33]);
+  // Time Complexity O(n^2)
